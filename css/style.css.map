@@ -1,0 +1,1 @@
+{"version":3,"sources":["..\\scss\\style.scss","style.css"],"names":[],"mappings":"AAEA;EACI,UAHM;ACEV","file":"style.css","sourcesContent":["$cervena: red;\r\n\r\nh1 {\r\n    color: $cervena;\r\n}","h1 {\n  color: red;\n}"]}

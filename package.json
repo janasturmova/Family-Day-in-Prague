@@ -1,0 +1,16 @@
+{
+  "name": "zaverecny-projekt",
+  "version": "1.0.0",
+  "description": "��#\u0000 \u0000F\u0000a\u0000m\u0000i\u0000l\u0000y\u0000-\u0000D\u0000a\u0000y\u0000-\u0000i\u0000n\u0000-\u0000P\u0000r\u0000a\u0000g\u0000u\u0000e\u0000\r\u0000 \u0000",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx @11ty/eleventy",
+    "serve": "npx @11ty/eleventy"
+  },
+  "keywords": [],
+  "author": "Jana Šturmová",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  }
+}
