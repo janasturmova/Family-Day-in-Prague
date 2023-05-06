@@ -1,2 +1,16 @@
-$headfont: font-family: 'Inknut Antiqua', serif;
-$mainfont: font-family: 'Andada Pro', serif;
+$titlefont: 'Inknut Antiqua', serif;
+$mainfont:'Andada Pro', serif;
+
+body {
+    font-family: $titlefont;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(195, 0, 255);
+}
+
+
+h1,
+h2 {
+    font-family: $mainfont;
+    color: red;
+}
