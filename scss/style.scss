@@ -1,3 +1,6 @@
+html {box-sizing: border-box;}
+*, ::after, ::before {box-sizing:inherit;}
+
 $titlefont: 'Inknut Antiqua', serif;
 $mainfont:'Andada Pro', serif;
 $spacer: 20px;
@@ -7,15 +10,15 @@ $titlecolor: rgb(63, 32, 32);
 
 body {
     font-family: $titlefont;
-    margin: $spacer;
+    margin: 0;
 }
 
 .logo {
     color: $titlecolor;
 	font-size: 25px;
 	font-weight: bold;
-	margin-bottom: $spacer / 2;
-	
+	margin: $spacer;
+	margin-bottom: $spacer/2;
 }
 
 .logo::before,
@@ -37,13 +40,15 @@ body {
 
 
 .menu__list {
-	margin: 0;
+	margin: $spacer;
+	margin-top: $spacer/2;
 	padding: 0;
 	list-style: none;
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	grid-template-rows: 15px;
-	gap: $spacer;
+	gap: $spacer/2;
+	
 
 	@media screen and (min-width: 730px) {
 		display: flex;
@@ -57,14 +62,14 @@ body {
 }
 
 header {
+	max-width: 1150px;
+	margin: 0 auto;
 	@media screen and (min-width: 1150px) {
 		display: flex;
 		justify-content: space-between;
-		align-items:first baseline;
+		align-items: first baseline;
 	}
 }
-
-
 
 .menu__link {
 	display: block;
@@ -78,5 +83,43 @@ header {
 	font-weight: bold;
 }
 
+.hero {
+	background-image: url(../images/uzdi.JPG);
+	width: 100vw;
+	height: 300px;
+	background-attachment: fixed;
+}
 
-   
+.hero__title,
+.hero__text {
+	color: white;
+	text-align: center;
+	text-shadow: 1px 1px 10px $titlecolor;
+}
+
+.hero__title::before,
+.hero__title::after {
+	content:" ";
+	display: block;
+	width: 306px;
+	height: 2px;
+	background-color: white;
+	text-shadow: 1px 1px 10px $titlecolor;
+}
+
+.hero__title::before {
+	margin: -10px auto;
+}
+
+.hero__title::after {
+	margin: -10px auto;
+}
+
+.hero__title {
+	padding-top: 50px;
+	font-size: 25px;
+}
+
+.hero__text {
+	display: none;
+}
