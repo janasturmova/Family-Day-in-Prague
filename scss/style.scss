@@ -3,61 +3,80 @@ $mainfont:'Andada Pro', serif;
 $spacer: 20px;
 $titlecolor: rgb(63, 32, 32);
 
+
+
 body {
     font-family: $titlefont;
     margin: $spacer;
 }
 
-.menu__logo {
+.logo {
     color: $titlecolor;
+	font-size: 25px;
+	font-weight: bold;
+	margin-bottom: $spacer / 2;
+	
 }
 
-.menu__checkbox {
-	position: absolute;
-	left: -9999px;
+.logo::before,
+.logo::after {
+	content:" ";
+	display: block;
+	width: 306px;
+	height: 2px;
+	background-color: $titlecolor;
 }
 
-.menu__toggler {
-	cursor: pointer;
-    color: $titlecolor;
-    font-weight: bold ;
+.logo::before {
+	margin-bottom: -10px;
 }
 
-.menu {
-	position: relative
+.logo::after {
+	margin-top: -10px;
 }
+
 
 .menu__list {
-    display: none;
 	margin: 0;
 	padding: 0;
 	list-style: none;
-	background-color: tomato;
-	width: 150px;
-	
-	
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: 15px;
+	gap: $spacer;
+
+	@media screen and (min-width: 730px) {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	@media screen and (min-width: 1150px) {
+		gap: $spacer * 2;
+		
+	}
 }
 
-.menu__item {
-	border-bottom: 1px solid white
+header {
+	@media screen and (min-width: 1150px) {
+		display: flex;
+		justify-content: space-between;
+		align-items:first baseline;
+	}
 }
+
+
 
 .menu__link {
 	display: block;
-	padding: 15px;
 	text-decoration: none;
-	color: white;
+	color: $titlecolor;
+	font-family: $titlefont;
 }
 
 .menu__link:hover {
-	background-color: rgb(175, 69, 50);
+	text-decoration-line: underline;
+	font-weight: bold;
 }
 
-.menu__checkbox:checked ~ .menu__list {
-	display: block;
-}
 
-.menu__upper-line {
-    display: flex;
-    justify-content: space-between;
-}
+   

@@ -3,54 +3,67 @@ body {
   margin: 20px;
 }
 
-.menu__logo {
+.logo {
   color: rgb(63, 32, 32);
-}
-
-.menu__checkbox {
-  position: absolute;
-  left: -9999px;
-}
-
-.menu__toggler {
-  cursor: pointer;
-  color: rgb(63, 32, 32);
+  font-size: 25px;
   font-weight: bold;
+  margin-bottom: 10px;
 }
 
-.menu {
-  position: relative;
+.logo::before,
+.logo::after {
+  content: " ";
+  display: block;
+  width: 306px;
+  height: 2px;
+  background-color: rgb(63, 32, 32);
+}
+
+.logo::before {
+  margin-bottom: -10px;
+}
+
+.logo::after {
+  margin-top: -10px;
 }
 
 .menu__list {
-  display: none;
   margin: 0;
   padding: 0;
   list-style: none;
-  background-color: tomato;
-  width: 150px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 15px;
+  gap: 20px;
+}
+@media screen and (min-width: 730px) {
+  .menu__list {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@media screen and (min-width: 1150px) {
+  .menu__list {
+    gap: 40px;
+  }
 }
 
-.menu__item {
-  border-bottom: 1px solid white;
+@media screen and (min-width: 1150px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: first baseline;
+  }
 }
 
 .menu__link {
   display: block;
-  padding: 15px;
   text-decoration: none;
-  color: white;
+  color: rgb(63, 32, 32);
+  font-family: "Inknut Antiqua", serif;
 }
 
 .menu__link:hover {
-  background-color: rgb(175, 69, 50);
-}
-
-.menu__checkbox:checked ~ .menu__list {
-  display: block;
-}
-
-.menu__upper-line {
-  display: flex;
-  justify-content: space-between;
+  text-decoration-line: underline;
+  font-weight: bold;
 }/*# sourceMappingURL=style.css.map */
