@@ -5,6 +5,7 @@ $titlefont: 'Inknut Antiqua', serif;
 $mainfont:'Andada Pro', serif;
 $spacer: 20px;
 $titlecolor: rgb(63, 32, 32);
+$maxwidth: 1000px;
 
 
 
@@ -15,7 +16,7 @@ body {
 }
 
 header {
-	max-width: 1150px;
+	max-width: $maxwidth;
 	margin: 0 auto;
 
 	@media screen and (min-width: 1150px) {
@@ -80,7 +81,7 @@ header {
 	color: $titlecolor;
 	font-family: $titlefont;
 
-	&__link:hover {
+	&:hover {
 		text-decoration-line: underline;
 		font-weight: bold;
 	}
@@ -89,17 +90,13 @@ header {
 .hero {
 	background-image: url(../images/uzdi.jpg);
 	width: 100vw;
-	height: 500px;
-	background-attachment: fixed;
-	background-repeat: no-repeat;
+	background-size: cover;
 	background-position: 50% 20%;
-	font-family: $titlefont;
-	padding-top: 50px;
-	font-size: 25px;
-
+	
 	@media screen and (min-width: 730px) {
-		font-size: 40px;
-		font-weight: bold;
+		height: 500px;
+		background-attachment: fixed;
+		background-repeat: no-repeat;
 	}
 	
 }
@@ -108,6 +105,14 @@ header {
 	color: white;
 	text-align: center;
 	text-shadow: 1px 1px 10px $titlecolor;
+	font-size: 25px;
+	font-family: $titlefont;
+	padding-top: 50px;
+
+	@media screen and (min-width: 730px) {
+		font-size: 40px;
+		font-weight: bold;
+	}
 
 	&::before,
 	&::after {
@@ -143,7 +148,7 @@ header {
 
 .intro1 {
 	margin: $spacer*3 auto;
-	max-width: 1150px;
+	max-width: $maxwidth;
 }
 
 .intro1__title {
@@ -161,6 +166,7 @@ header {
 		display: block;
 		width: 400px;
 		margin: $spacer*2;
+		margin-right: 0;
 		border-radius: 5px;
 	}
 }
@@ -175,46 +181,47 @@ header {
 .intro1__text {
 	text-align: center;
 	margin: $spacer*2;
-	margin-left: 0;
+	
 
 	@media  screen and (min-width: 730px) {
 		text-align: justify;
 	}
-
 }
 
 .hero2 {
-	background-image: url(../images/zamecky1.JPG);
+	background-image: url(../images/zamecky1.jpg);
 	width: 100vw;
-	height: 500px;
-	background-attachment: fixed;
-	background-repeat: no-repeat;
-	background-position: 63% 20%;
-	font-family: $titlefont;
-	padding-top: 150px;
-	font-size: 25px;
-
-	@media screen and (min-width: 730px) {
-		font-size: 40px;
-		font-weight: bold;
-	}
-
-	@media screen and (min-width: 1150px) {
-		background-image: url(../images/zamecky2.jpg);
-	}
+	background-size: cover;
+	background-position: 50% 20%;
 	
+	@media screen and (min-width: 730px) {
+		height: 500px;
+		background-attachment: fixed;
+		background-repeat: no-repeat;
+		display: flex;
+	}
 }
 
 .hero2__title {
 	color: white;
 	text-align: center;
+	margin: $spacer;
 	text-shadow: 1px 1px 10px $titlecolor;
+	font-size: 25px;
+	font-family: $titlefont;
+	padding: 150px 0;
+	
+	@media screen and (min-width: 730px) {
+		font-size: 40px;
+		font-weight: bold;
+		padding: 0;
+		margin: 200px auto;
+	}
 
 	&::before,
 	&::after {
 	content:" ";
 	display: block;
-	color: white;
 	width: 306px;
 	height: 2px;
 	background-color: white;
@@ -232,6 +239,116 @@ header {
 	&::after {
 		margin: -10px auto;
 	}
-
 }
 
+.intro2 {
+	margin: $spacer*3 auto;
+	max-width: 1150px;
+}
+
+.intro2__title {
+	font-size: $titlefont;
+	margin: $spacer;
+	margin-top: $spacer*3;
+	margin-bottom: $spacer*3;
+	text-align: center;
+}
+
+.intro2__image {
+	display: none;
+
+	@media  screen and (min-width: 730px) {
+		display: block;
+		width: 400px;
+		margin: $spacer*2;
+		margin-right: 0;
+		border-radius: 5px;
+	}
+}
+
+.intro2__container {
+	display: flex;
+	flex-direction: row-reverse;
+	align-items: center;
+	gap: $spacer;
+	
+}
+
+.intro2__text {
+	text-align: center;
+	margin: $spacer*2;
+	
+
+	@media  screen and (min-width: 730px) {
+		text-align: justify;
+	}
+}
+
+.hero3 {
+	background-image: url(../images/nalavicce1.JPG);
+	width: 100vw;
+	background-size: cover;
+	background-position: 50% 20%;
+	
+	@media screen and (min-width: 730px) {
+		height: 500px;
+		background-attachment: fixed;
+		background-repeat: no-repeat;
+		display: flex;
+	}
+}
+
+.hero3__title {
+	color: white;
+	text-align: center;
+	margin: $spacer;
+	text-shadow: 1px 1px 10px $titlecolor;
+	font-size: 25px;
+	font-family: $titlefont;
+	padding: 150px 0;
+	
+	@media screen and (min-width: 730px) {
+		font-size: 40px;
+		font-weight: bold;
+		padding: 0;
+		margin: 200px auto;
+	}
+
+	&::before,
+	&::after {
+	content:" ";
+	display: block;
+	width: 306px;
+	height: 2px;
+	background-color: white;
+	box-shadow: 1px 1px 10px $titlecolor;
+
+	@media screen and (min-width: 730px) {
+		width: 480px;
+		}
+	}
+
+	&::before {
+		margin: -10px auto;
+	}
+
+	&::after {
+		margin: -10px auto;
+	}
+}
+
+footer {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	align-items: center;
+	padding: $spacer;
+	margin-top: $spacer*3;
+	background-color: $titlecolor;
+	color: white;
+}
+
+.footer__facebook,
+.footer__email{
+	color:white;
+}
