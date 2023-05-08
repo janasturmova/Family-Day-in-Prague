@@ -9,6 +9,19 @@ html {
 body {
   font-family: "Andada Pro", serif;
   margin: 0;
+  color: rgb(63, 32, 32);
+}
+
+header {
+  max-width: 1150px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 1150px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: first baseline;
+  }
 }
 
 .logo {
@@ -19,20 +32,16 @@ body {
   margin: 20px;
   margin-bottom: 10px;
 }
-
-.logo::before,
-.logo::after {
+.logo::before, .logo::after {
   content: " ";
   display: block;
   width: 306px;
   height: 2px;
   background-color: rgb(63, 32, 32);
 }
-
 .logo::before {
   margin-bottom: -10px;
 }
-
 .logo::after {
   margin-top: -10px;
 }
@@ -59,18 +68,6 @@ body {
   }
 }
 
-header {
-  max-width: 1150px;
-  margin: 0 auto;
-}
-@media screen and (min-width: 1150px) {
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: first baseline;
-  }
-}
-
 .menu__link {
   font-family: "Inknut Antiqua", serif;
   display: block;
@@ -78,70 +75,150 @@ header {
   color: rgb(63, 32, 32);
   font-family: "Inknut Antiqua", serif;
 }
-
-.menu__link:hover {
+.menu__link__link:hover {
   text-decoration-line: underline;
   font-weight: bold;
 }
 
 .hero {
-  background-image: url(../images/uzdi5.jpg);
+  background-image: url(../images/uzdi.jpg);
   width: 100vw;
   height: 500px;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: 50% 20%;
-}
-
-.hero__title,
-.hero__text {
-  color: white;
-  text-align: center;
-  text-shadow: 1px 1px 10px rgb(63, 32, 32);
-}
-
-.hero__title::before,
-.hero__title::after {
-  content: " ";
-  display: block;
-  width: 306px;
-  height: 2px;
-  background-color: white;
-  text-shadow: 1px 1px 10px rgb(63, 32, 32);
-}
-@media screen and (min-width: 730px) {
-  .hero__title::before,
-  .hero__title::after {
-    width: 480px;
-  }
-}
-
-.hero__title::before {
-  margin: -10px auto;
-}
-
-.hero__title::after {
-  margin: -10px auto;
-}
-
-.hero__title {
   font-family: "Inknut Antiqua", serif;
   padding-top: 50px;
   font-size: 25px;
 }
 @media screen and (min-width: 730px) {
-  .hero__title {
+  .hero {
     font-size: 40px;
+    font-weight: bold;
   }
 }
 
+.hero__title {
+  color: white;
+  text-align: center;
+  text-shadow: 1px 1px 10px rgb(63, 32, 32);
+}
+.hero__title::before, .hero__title::after {
+  content: " ";
+  display: block;
+  width: 306px;
+  height: 2px;
+  background-color: white;
+  box-shadow: 1px 1px 10px rgb(63, 32, 32);
+}
+@media screen and (min-width: 730px) {
+  .hero__title::before, .hero__title::after {
+    width: 480px;
+  }
+}
+.hero__title::before {
+  margin: -10px auto;
+}
+.hero__title::after {
+  margin: -10px auto;
+}
+
 .hero__text {
+  color: white;
+  text-align: center;
+  text-shadow: 1px 1px 10px rgb(63, 32, 32);
   padding: 80px;
   font-size: 25px;
   font-family: "Andada Pro", serif;
 }
 
 .intro1 {
-  margin: 0 auto;
+  margin: 60px auto;
   max-width: 1150px;
+}
+
+.intro1__title {
+  font-size: "Inknut Antiqua", serif;
+  margin: 20px;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.intro1__image {
+  display: none;
+}
+@media screen and (min-width: 730px) {
+  .intro1__image {
+    display: block;
+    width: 400px;
+    margin: 40px;
+    border-radius: 5px;
+  }
+}
+
+.intro1__container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.intro1__text {
+  text-align: center;
+  margin: 40px;
+  margin-left: 0;
+}
+@media screen and (min-width: 730px) {
+  .intro1__text {
+    text-align: justify;
+  }
+}
+
+.hero2 {
+  background-image: url(../images/zamecky1.JPG);
+  width: 100vw;
+  height: 500px;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: 63% 20%;
+  font-family: "Inknut Antiqua", serif;
+  padding-top: 150px;
+  font-size: 25px;
+}
+@media screen and (min-width: 730px) {
+  .hero2 {
+    font-size: 40px;
+    font-weight: bold;
+  }
+}
+@media screen and (min-width: 1150px) {
+  .hero2 {
+    background-image: url(../images/zamecky2.jpg);
+  }
+}
+
+.hero2__title {
+  color: white;
+  text-align: center;
+  text-shadow: 1px 1px 10px rgb(63, 32, 32);
+}
+.hero2__title::before, .hero2__title::after {
+  content: " ";
+  display: block;
+  color: white;
+  width: 306px;
+  height: 2px;
+  background-color: white;
+  box-shadow: 1px 1px 10px rgb(63, 32, 32);
+}
+@media screen and (min-width: 730px) {
+  .hero2__title::before, .hero2__title::after {
+    width: 480px;
+  }
+}
+.hero2__title::before {
+  margin: -10px auto;
+}
+.hero2__title::after {
+  margin: -10px auto;
 }/*# sourceMappingURL=style.css.map */

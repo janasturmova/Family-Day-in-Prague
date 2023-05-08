@@ -11,6 +11,18 @@ $titlecolor: rgb(63, 32, 32);
 body {
     font-family: $mainfont;
     margin: 0;
+	color: $titlecolor;
+}
+
+header {
+	max-width: 1150px;
+	margin: 0 auto;
+
+	@media screen and (min-width: 1150px) {
+		display: flex;
+		justify-content: space-between;
+		align-items: first baseline;
+	}
 }
 
 .logo {
@@ -20,25 +32,24 @@ body {
 	font-weight: bold;
 	margin: $spacer;
 	margin-bottom: $spacer/2;
-}
 
-.logo::before,
-.logo::after {
-	content:" ";
-	display: block;
-	width: 306px;
-	height: 2px;
-	background-color: $titlecolor;
-}
+	&::before,
+	&::after {
+		content:" ";
+		display: block;
+		width: 306px;
+		height: 2px;
+		background-color: $titlecolor;
+	}
+	&::before {
+		margin-bottom: -10px;
+	}
+	
+	&::after {
+		margin-top: -10px;
+	}
 
-.logo::before {
-	margin-bottom: -10px;
 }
-
-.logo::after {
-	margin-top: -10px;
-}
-
 
 .menu__list {
 	margin: $spacer;
@@ -62,87 +73,165 @@ body {
 	}
 }
 
-header {
-	max-width: 1150px;
-	margin: 0 auto;
-	@media screen and (min-width: 1150px) {
-		display: flex;
-		justify-content: space-between;
-		align-items: first baseline;
-	}
-}
-
 .menu__link {
 	font-family: $titlefont;
 	display: block;
 	text-decoration: none;
 	color: $titlecolor;
 	font-family: $titlefont;
-}
 
-.menu__link:hover {
-	text-decoration-line: underline;
-	font-weight: bold;
+	&__link:hover {
+		text-decoration-line: underline;
+		font-weight: bold;
+	}
 }
 
 .hero {
-	background-image: url(../images/uzdi5.jpg);
+	background-image: url(../images/uzdi.jpg);
 	width: 100vw;
 	height: 500px;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-position: 50% 20%;
+	font-family: $titlefont;
+	padding-top: 50px;
+	font-size: 25px;
+
+	@media screen and (min-width: 730px) {
+		font-size: 40px;
+		font-weight: bold;
+	}
 	
 }
 
-.hero__title,
-.hero__text {
+.hero__title {
 	color: white;
 	text-align: center;
 	text-shadow: 1px 1px 10px $titlecolor;
-}
 
-.hero__title::before,
-.hero__title::after {
+	&::before,
+	&::after {
 	content:" ";
 	display: block;
 	width: 306px;
 	height: 2px;
 	background-color: white;
-	text-shadow: 1px 1px 10px $titlecolor;
+	box-shadow: 1px 1px 10px $titlecolor;
 
 	@media screen and (min-width: 730px) {
 		width: 480px;
+		}
 	}
 
+	&::before {
+		margin: -10px auto;
 	}
 
-.hero__title::before {
-	margin: -10px auto;
-}
-
-.hero__title::after {
-	margin: -10px auto;
-}
-
-.hero__title {
-	font-family: $titlefont;
-	padding-top: 50px;
-	font-size: 25px;
-	@media screen and (min-width: 730px) {
-		font-size: 40px;
+	&::after {
+		margin: -10px auto;
 	}
 }
 
 .hero__text {
+	color: white;
+	text-align: center;
+	text-shadow: 1px 1px 10px $titlecolor;
 	padding: $spacer*4;
 	font-size: 25px;
 	font-family: $mainfont;
-
 }
 
 .intro1 {
-	margin: 0 auto;
+	margin: $spacer*3 auto;
 	max-width: 1150px;
+}
+
+.intro1__title {
+	font-size: $titlefont;
+	margin: $spacer;
+	margin-top: $spacer*3;
+	margin-bottom: $spacer*3;
+	text-align: center;
+}
+
+.intro1__image {
+	display: none;
+
+	@media  screen and (min-width: 730px) {
+		display: block;
+		width: 400px;
+		margin: $spacer*2;
+		border-radius: 5px;
+	}
+}
+
+.intro1__container {
+	display: flex;
+	align-items: center;
+	gap: $spacer;
+	
+}
+
+.intro1__text {
+	text-align: center;
+	margin: $spacer*2;
+	margin-left: 0;
+
+	@media  screen and (min-width: 730px) {
+		text-align: justify;
+	}
 
 }
+
+.hero2 {
+	background-image: url(../images/zamecky1.JPG);
+	width: 100vw;
+	height: 500px;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: 63% 20%;
+	font-family: $titlefont;
+	padding-top: 150px;
+	font-size: 25px;
+
+	@media screen and (min-width: 730px) {
+		font-size: 40px;
+		font-weight: bold;
+	}
+
+	@media screen and (min-width: 1150px) {
+		background-image: url(../images/zamecky2.jpg);
+	}
+	
+}
+
+.hero2__title {
+	color: white;
+	text-align: center;
+	text-shadow: 1px 1px 10px $titlecolor;
+
+	&::before,
+	&::after {
+	content:" ";
+	display: block;
+	color: white;
+	width: 306px;
+	height: 2px;
+	background-color: white;
+	box-shadow: 1px 1px 10px $titlecolor;
+
+	@media screen and (min-width: 730px) {
+		width: 480px;
+		}
+	}
+
+	&::before {
+		margin: -10px auto;
+	}
+
+	&::after {
+		margin: -10px auto;
+	}
+
+}
+
