@@ -132,54 +132,7 @@ header {
   font-family: "Andada Pro", serif;
 }
 
-.intro {
-  max-width: 1000px;
-  margin: 40px auto;
-}
-@media screen and (min-width: 730px) {
-  .intro {
-    margin: 80px auto;
-  }
-}
-.intro--alt {
-  flex-direction: row-reverse;
-}
-
-.intro__title {
-  font-size: "Inknut Antiqua", serif;
-  margin: 0 20px;
-  text-align: center;
-}
-
-.intro__image {
-  display: none;
-}
-@media screen and (min-width: 730px) {
-  .intro__image {
-    display: block;
-    width: 400px;
-    margin: 40px;
-    margin-bottom: 0;
-    border-radius: 5px;
-  }
-}
-
-.intro__container {
-  display: flex;
-  align-items: center;
-}
-
-.intro__text {
-  text-align: center;
-  margin: 20px;
-  margin-bottom: 0;
-}
-@media screen and (min-width: 730px) {
-  .intro__text {
-    text-align: justify;
-  }
-}
-
+/*----------------------------------------------------------*/
 .hero2 {
   background-image: url(../images/zamecky1.jpg);
   width: 100vw;
@@ -235,60 +188,6 @@ header {
   margin: -10px auto;
 }
 
-/*
-.hero3 {
-	background-image: url(../images/nalavicce1.JPG);
-	width: 100vw;
-	background-size: cover;
-	background-position: 50% 20%;
-
-	@media screen and (min-width: 730px) {
-		height: 500px;
-		background-attachment: fixed;
-		background-repeat: no-repeat;
-		display: flex;
-	}
-}
-
-.hero3__title {
-	color: white;
-	text-align: center;
-	margin: settings.$spacer;
-	text-shadow: 1px 1px 10px settings.$titlecolor;
-	font-size: 25px;
-	font-family: settings.$titlefont;
-	padding: 150px 0;
-
-	@media screen and (min-width: 730px) {
-		font-size: 40px;
-		font-weight: bold;
-		padding: 0;
-		margin: 200px auto;
-	}
-
-	&::before,
-	&::after {
-	content:" ";
-	display: block;
-	width: 306px;
-	height: 2px;
-	background-color: white;
-	box-shadow: 1px 1px 10px settings.$titlecolor;
-
-	@media screen and (min-width: 730px) {
-		width: 480px;
-		}
-	}
-
-	&::before {
-		margin: -10px auto;
-	}
-
-	&::after {
-		margin: -10px auto;
-	}
-}
-*/
 footer {
   display: flex;
   flex-direction: column;
@@ -303,4 +202,52 @@ footer {
 .footer__facebook,
 .footer__email {
   color: white;
+}
+
+.intro {
+  max-width: 1000px;
+  margin: 40px auto;
+}
+@media screen and (min-width: 730px) {
+  .intro {
+    margin: 80px auto;
+  }
+}
+.intro--alt {
+  flex-direction: row-reverse;
+}
+
+.intro__title {
+  font-size: "Inknut Antiqua", serif;
+  margin: 0 20px;
+  text-align: center;
+}
+
+.intro__image {
+  display: none;
+}
+@media screen and (min-width: 730px) {
+  .intro__image {
+    display: block;
+    width: 400px;
+    margin: 40px;
+    margin-bottom: 0;
+    border-radius: 5px;
+  }
+}
+
+.intro__container {
+  display: flex;
+  align-items: center;
+}
+
+.intro__text {
+  text-align: center;
+  margin: 20px;
+  margin-bottom: 0;
+}
+@media screen and (min-width: 730px) {
+  .intro__text {
+    text-align: justify;
+  }
 }/*# sourceMappingURL=style.css.map */

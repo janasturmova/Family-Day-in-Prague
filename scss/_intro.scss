@@ -1,0 +1,50 @@
+@use "settings";
+
+
+.intro {
+	max-width: settings.$maxwidth;
+	margin: settings.$spacer*2 auto;
+
+	@media screen and (min-width: 730px) {
+		margin: settings.$spacer*4 auto;
+	}
+
+	&--alt {
+		flex-direction: row-reverse;
+	}
+}
+
+
+.intro__title {
+	font-size: settings.$titlefont;
+	margin: 0 settings.$spacer;
+	text-align: center;
+}
+
+.intro__image {
+	display: none;
+
+	@media  screen and (min-width: 730px) {
+		display: block;
+		width: 400px;
+		margin: settings.$spacer*2;
+		margin-bottom: 0;
+		border-radius: 5px;
+	}
+}
+
+.intro__container {
+	display: flex;
+	align-items: center;
+}
+
+.intro__text {
+	text-align: center;
+	margin: settings.$spacer;
+	margin-bottom: 0;
+	
+	@media  screen and (min-width: 730px) {
+		text-align: justify;
+	}
+}
+

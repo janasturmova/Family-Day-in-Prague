@@ -1,0 +1,13 @@
+@use "settings";
+
+
+header {
+	max-width: settings.$maxwidth;
+	margin: 0 auto;
+
+	@media screen and (min-width: 1150px) {
+		display: flex;
+		justify-content: space-between;
+		align-items: first baseline;
+	}
+}

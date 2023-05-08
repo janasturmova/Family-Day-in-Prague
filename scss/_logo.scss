@@ -1,0 +1,26 @@
+@use "settings";
+
+.logo {
+    color: settings.$titlecolor;
+	font-family: settings.$titlefont;
+	font-size: 25px;
+	font-weight: bold;
+	margin: settings.$spacer;
+	margin-bottom: settings.$spacer / 2;
+
+	&::before,
+	&::after {
+		content:" ";
+		display: block;
+		width: 306px;
+		height: 2px;
+		background-color: settings.$titlecolor;
+	}
+	&::before {
+		margin-bottom: -10px;
+	}
+	
+	&::after {
+		margin-top: -10px;
+	}
+}

@@ -1,0 +1,30 @@
+@use "settings";
+
+.menu__list {
+	margin: settings.$spacer;
+	margin-top: settings.$spacer / 2;
+	padding: 0;
+	list-style: none;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: 15px;
+	gap: settings.$spacer / 2;
+	
+	@media screen and (min-width: 730px) {
+		display: flex;
+		justify-content: space-between;
+	}
+}	
+
+.menu__link {
+	font-family: settings.$titlefont;
+	display: block;
+	text-decoration: none;
+	color: settings.$titlecolor;
+	font-family: settings.$titlefont;
+
+	&:hover {
+		text-decoration-line: underline;
+		font-weight: bold;
+	}
+}

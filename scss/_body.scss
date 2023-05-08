@@ -1,0 +1,7 @@
+@use "settings";
+
+body {
+    font-family: settings.$mainfont;
+    margin: 0;
+	color: settings.$titlecolor;
+}
