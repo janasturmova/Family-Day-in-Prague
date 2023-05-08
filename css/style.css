@@ -62,11 +62,6 @@ header {
     justify-content: space-between;
   }
 }
-@media screen and (min-width: 1150px) {
-  .menu__list {
-    gap: 40px;
-  }
-}
 
 .menu__link {
   font-family: "Inknut Antiqua", serif;
@@ -137,44 +132,50 @@ header {
   font-family: "Andada Pro", serif;
 }
 
-.intro1 {
-  margin: 60px auto;
+.intro {
   max-width: 1000px;
+  margin: 40px auto;
+}
+@media screen and (min-width: 730px) {
+  .intro {
+    margin: 80px auto;
+  }
+}
+.intro--alt {
+  flex-direction: row-reverse;
 }
 
-.intro1__title {
+.intro__title {
   font-size: "Inknut Antiqua", serif;
-  margin: 20px;
-  margin-top: 60px;
-  margin-bottom: 60px;
+  margin: 0 20px;
   text-align: center;
 }
 
-.intro1__image {
+.intro__image {
   display: none;
 }
 @media screen and (min-width: 730px) {
-  .intro1__image {
+  .intro__image {
     display: block;
     width: 400px;
     margin: 40px;
-    margin-right: 0;
+    margin-bottom: 0;
     border-radius: 5px;
   }
 }
 
-.intro1__container {
+.intro__container {
   display: flex;
   align-items: center;
-  gap: 20px;
 }
 
-.intro1__text {
+.intro__text {
   text-align: center;
-  margin: 40px;
+  margin: 20px;
+  margin-bottom: 0;
 }
 @media screen and (min-width: 730px) {
-  .intro1__text {
+  .intro__text {
     text-align: justify;
   }
 }
@@ -184,6 +185,9 @@ header {
   width: 100vw;
   background-size: cover;
   background-position: 50% 20%;
+}
+.hero2--alt {
+  background-image: url(../images/nalavicce1.jpg);
 }
 @media screen and (min-width: 730px) {
   .hero2 {
@@ -231,101 +235,60 @@ header {
   margin: -10px auto;
 }
 
-.intro2 {
-  margin: 60px auto;
-  max-width: 1150px;
-}
-
-.intro2__title {
-  font-size: "Inknut Antiqua", serif;
-  margin: 20px;
-  margin-top: 60px;
-  margin-bottom: 60px;
-  text-align: center;
-}
-
-.intro2__image {
-  display: none;
-}
-@media screen and (min-width: 730px) {
-  .intro2__image {
-    display: block;
-    width: 400px;
-    margin: 40px;
-    margin-right: 0;
-    border-radius: 5px;
-  }
-}
-
-.intro2__container {
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
-  gap: 20px;
-}
-
-.intro2__text {
-  text-align: center;
-  margin: 40px;
-}
-@media screen and (min-width: 730px) {
-  .intro2__text {
-    text-align: justify;
-  }
-}
-
+/*
 .hero3 {
-  background-image: url(../images/nalavicce1.JPG);
-  width: 100vw;
-  background-size: cover;
-  background-position: 50% 20%;
-}
-@media screen and (min-width: 730px) {
-  .hero3 {
-    height: 500px;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    display: flex;
-  }
+	background-image: url(../images/nalavicce1.JPG);
+	width: 100vw;
+	background-size: cover;
+	background-position: 50% 20%;
+
+	@media screen and (min-width: 730px) {
+		height: 500px;
+		background-attachment: fixed;
+		background-repeat: no-repeat;
+		display: flex;
+	}
 }
 
 .hero3__title {
-  color: white;
-  text-align: center;
-  margin: 20px;
-  text-shadow: 1px 1px 10px rgb(63, 32, 32);
-  font-size: 25px;
-  font-family: "Inknut Antiqua", serif;
-  padding: 150px 0;
-}
-@media screen and (min-width: 730px) {
-  .hero3__title {
-    font-size: 40px;
-    font-weight: bold;
-    padding: 0;
-    margin: 200px auto;
-  }
-}
-.hero3__title::before, .hero3__title::after {
-  content: " ";
-  display: block;
-  width: 306px;
-  height: 2px;
-  background-color: white;
-  box-shadow: 1px 1px 10px rgb(63, 32, 32);
-}
-@media screen and (min-width: 730px) {
-  .hero3__title::before, .hero3__title::after {
-    width: 480px;
-  }
-}
-.hero3__title::before {
-  margin: -10px auto;
-}
-.hero3__title::after {
-  margin: -10px auto;
-}
+	color: white;
+	text-align: center;
+	margin: settings.$spacer;
+	text-shadow: 1px 1px 10px settings.$titlecolor;
+	font-size: 25px;
+	font-family: settings.$titlefont;
+	padding: 150px 0;
 
+	@media screen and (min-width: 730px) {
+		font-size: 40px;
+		font-weight: bold;
+		padding: 0;
+		margin: 200px auto;
+	}
+
+	&::before,
+	&::after {
+	content:" ";
+	display: block;
+	width: 306px;
+	height: 2px;
+	background-color: white;
+	box-shadow: 1px 1px 10px settings.$titlecolor;
+
+	@media screen and (min-width: 730px) {
+		width: 480px;
+		}
+	}
+
+	&::before {
+		margin: -10px auto;
+	}
+
+	&::after {
+		margin: -10px auto;
+	}
+}
+*/
 footer {
   display: flex;
   flex-direction: column;

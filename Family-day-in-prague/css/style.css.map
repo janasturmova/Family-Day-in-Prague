@@ -1,1 +1,0 @@
-{"version":3,"sources":["..\\scss\\style.scss","style.css"],"names":[],"mappings":"AAEA;EACI,yBAHM;ACEV","file":"style.css","sourcesContent":["$cervena: rgb(212, 113, 174);\r\n\r\nh1 {\r\n    color: $cervena;\r\n}","h1 {\n  color: rgb(212, 113, 174);\n}"]}

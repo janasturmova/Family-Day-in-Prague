@@ -1,22 +1,13 @@
-html {box-sizing: border-box;}
-*, ::after, ::before {box-sizing:inherit;}
-
-$titlefont: 'Inknut Antiqua', serif;
-$mainfont:'Andada Pro', serif;
-$spacer: 20px;
-$titlecolor: rgb(63, 32, 32);
-$maxwidth: 1000px;
-
-
+@use "settings";
 
 body {
-    font-family: $mainfont;
+    font-family: settings.$mainfont;
     margin: 0;
-	color: $titlecolor;
+	color: settings.$titlecolor;
 }
 
 header {
-	max-width: $maxwidth;
+	max-width: settings.$maxwidth;
 	margin: 0 auto;
 
 	@media screen and (min-width: 1150px) {
@@ -27,12 +18,12 @@ header {
 }
 
 .logo {
-    color: $titlecolor;
-	font-family: $titlefont;
+    color: settings.$titlecolor;
+	font-family: settings.$titlefont;
 	font-size: 25px;
 	font-weight: bold;
-	margin: $spacer;
-	margin-bottom: $spacer/2;
+	margin: settings.$spacer;
+	margin-bottom: settings.$spacer/2;
 
 	&::before,
 	&::after {
@@ -40,7 +31,7 @@ header {
 		display: block;
 		width: 306px;
 		height: 2px;
-		background-color: $titlecolor;
+		background-color: settings.$titlecolor;
 	}
 	&::before {
 		margin-bottom: -10px;
@@ -53,33 +44,27 @@ header {
 }
 
 .menu__list {
-	margin: $spacer;
-	margin-top: $spacer/2;
+	margin: settings.$spacer;
+	margin-top: settings.$spacer/2;
 	padding: 0;
 	list-style: none;
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	grid-template-rows: 15px;
-	gap: $spacer/2;
+	gap: settings.$spacer/2;
 	
-
 	@media screen and (min-width: 730px) {
 		display: flex;
 		justify-content: space-between;
 	}
-
-	@media screen and (min-width: 1150px) {
-		gap: $spacer * 2;
-		
-	}
-}
+}	
 
 .menu__link {
-	font-family: $titlefont;
+	font-family: settings.$titlefont;
 	display: block;
 	text-decoration: none;
-	color: $titlecolor;
-	font-family: $titlefont;
+	color: settings.$titlecolor;
+	font-family: settings.$titlefont;
 
 	&:hover {
 		text-decoration-line: underline;
@@ -104,9 +89,9 @@ header {
 .hero__title {
 	color: white;
 	text-align: center;
-	text-shadow: 1px 1px 10px $titlecolor;
+	text-shadow: 1px 1px 10px settings.$titlecolor;
 	font-size: 25px;
-	font-family: $titlefont;
+	font-family: settings.$titlefont;
 	padding-top: 50px;
 
 	@media screen and (min-width: 730px) {
@@ -121,7 +106,7 @@ header {
 	width: 306px;
 	height: 2px;
 	background-color: white;
-	box-shadow: 1px 1px 10px $titlecolor;
+	box-shadow: 1px 1px 10px settings.$titlecolor;
 
 	@media screen and (min-width: 730px) {
 		width: 480px;
@@ -140,49 +125,53 @@ header {
 .hero__text {
 	color: white;
 	text-align: center;
-	text-shadow: 1px 1px 10px $titlecolor;
-	padding: $spacer*4;
+	text-shadow: 1px 1px 10px settings.$titlecolor;
+	padding: settings.$spacer*4;
 	font-size: 25px;
-	font-family: $mainfont;
+	font-family: settings.$mainfont;
 }
 
-.intro1 {
-	margin: $spacer*3 auto;
-	max-width: $maxwidth;
+.intro {
+	max-width: settings.$maxwidth;
+	margin: settings.$spacer*2 auto;
+
+	@media screen and (min-width: 730px) {
+		margin: settings.$spacer*4 auto;
+	}
+
+	&--alt {
+		flex-direction: row-reverse;
+	}
 }
 
-.intro1__title {
-	font-size: $titlefont;
-	margin: $spacer;
-	margin-top: $spacer*3;
-	margin-bottom: $spacer*3;
+.intro__title {
+	font-size: settings.$titlefont;
+	margin: 0 settings.$spacer;
 	text-align: center;
 }
 
-.intro1__image {
+.intro__image {
 	display: none;
 
 	@media  screen and (min-width: 730px) {
 		display: block;
 		width: 400px;
-		margin: $spacer*2;
-		margin-right: 0;
+		margin: settings.$spacer*2;
+		margin-bottom: 0;
 		border-radius: 5px;
 	}
 }
 
-.intro1__container {
+.intro__container {
 	display: flex;
 	align-items: center;
-	gap: $spacer;
-	
 }
 
-.intro1__text {
+.intro__text {
 	text-align: center;
-	margin: $spacer*2;
+	margin: settings.$spacer;
+	margin-bottom: 0;
 	
-
 	@media  screen and (min-width: 730px) {
 		text-align: justify;
 	}
@@ -193,6 +182,10 @@ header {
 	width: 100vw;
 	background-size: cover;
 	background-position: 50% 20%;
+
+	&--alt {
+		background-image: url(../images/nalavicce1.jpg);
+	}
 	
 	@media screen and (min-width: 730px) {
 		height: 500px;
@@ -205,10 +198,10 @@ header {
 .hero2__title {
 	color: white;
 	text-align: center;
-	margin: $spacer;
-	text-shadow: 1px 1px 10px $titlecolor;
+	margin: settings.$spacer;
+	text-shadow: 1px 1px 10px settings.$titlecolor;
 	font-size: 25px;
-	font-family: $titlefont;
+	font-family: settings.$titlefont;
 	padding: 150px 0;
 	
 	@media screen and (min-width: 730px) {
@@ -225,7 +218,7 @@ header {
 	width: 306px;
 	height: 2px;
 	background-color: white;
-	box-shadow: 1px 1px 10px $titlecolor;
+	box-shadow: 1px 1px 10px settings.$titlecolor;
 
 	@media screen and (min-width: 730px) {
 		width: 480px;
@@ -241,49 +234,8 @@ header {
 	}
 }
 
-.intro2 {
-	margin: $spacer*3 auto;
-	max-width: 1150px;
-}
 
-.intro2__title {
-	font-size: $titlefont;
-	margin: $spacer;
-	margin-top: $spacer*3;
-	margin-bottom: $spacer*3;
-	text-align: center;
-}
-
-.intro2__image {
-	display: none;
-
-	@media  screen and (min-width: 730px) {
-		display: block;
-		width: 400px;
-		margin: $spacer*2;
-		margin-right: 0;
-		border-radius: 5px;
-	}
-}
-
-.intro2__container {
-	display: flex;
-	flex-direction: row-reverse;
-	align-items: center;
-	gap: $spacer;
-	
-}
-
-.intro2__text {
-	text-align: center;
-	margin: $spacer*2;
-	
-
-	@media  screen and (min-width: 730px) {
-		text-align: justify;
-	}
-}
-
+/*
 .hero3 {
 	background-image: url(../images/nalavicce1.JPG);
 	width: 100vw;
@@ -301,10 +253,10 @@ header {
 .hero3__title {
 	color: white;
 	text-align: center;
-	margin: $spacer;
-	text-shadow: 1px 1px 10px $titlecolor;
+	margin: settings.$spacer;
+	text-shadow: 1px 1px 10px settings.$titlecolor;
 	font-size: 25px;
-	font-family: $titlefont;
+	font-family: settings.$titlefont;
 	padding: 150px 0;
 	
 	@media screen and (min-width: 730px) {
@@ -321,7 +273,7 @@ header {
 	width: 306px;
 	height: 2px;
 	background-color: white;
-	box-shadow: 1px 1px 10px $titlecolor;
+	box-shadow: 1px 1px 10px settings.$titlecolor;
 
 	@media screen and (min-width: 730px) {
 		width: 480px;
@@ -336,15 +288,16 @@ header {
 		margin: -10px auto;
 	}
 }
+*/
 
 footer {
 	display: flex;
 	flex-direction: column;
 	gap: 20px;
 	align-items: center;
-	padding: $spacer;
-	margin-top: $spacer*3;
-	background-color: $titlecolor;
+	padding: settings.$spacer;
+	margin-top: settings.$spacer*3;
+	background-color: settings.$titlecolor;
 	color: white;
 }
 
