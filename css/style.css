@@ -11,9 +11,14 @@ body {
   margin: 0;
   color: rgb(63, 32, 32);
 }
+@media screen and (min-width: 730px) {
+  body {
+    font-size: 20px;
+  }
+}
 
 header {
-  max-width: 1000px;
+  max-width: 1500px;
   margin: 0 auto;
 }
 @media screen and (min-width: 1150px) {
@@ -48,13 +53,12 @@ header {
 
 .menu__list {
   margin: 20px;
-  margin-top: 10px;
   padding: 0;
   list-style: none;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 15px;
-  gap: 10px;
+  gap: 40px;
 }
 @media screen and (min-width: 730px) {
   .menu__list {
@@ -71,6 +75,10 @@ header {
   font-family: "Inknut Antiqua", serif;
 }
 .menu__link:hover {
+  font-weight: bold;
+}
+
+.menu__item--active .menu__link {
   text-decoration-line: underline;
   font-weight: bold;
 }
@@ -188,29 +196,13 @@ header {
   margin: -10px auto;
 }
 
-footer {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  align-items: center;
-  padding: 20px;
-  margin-top: 60px;
-  background-color: rgb(63, 32, 32);
-  color: white;
-}
-
-.footer__facebook,
-.footer__email {
-  color: white;
-}
-
 .intro {
   max-width: 1000px;
   margin: 40px auto;
 }
 @media screen and (min-width: 730px) {
   .intro {
-    margin: 80px auto;
+    margin: 120px auto;
   }
 }
 .intro--alt {
@@ -250,4 +242,26 @@ footer {
   .intro__text {
     text-align: justify;
   }
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  padding: 20px;
+  margin-top: 60px;
+  background-color: rgb(63, 32, 32);
+  color: white;
+}
+
+.footer__facebook,
+.footer__email {
+  color: white;
+}
+
+.hero2--alt2 {
+  background-image: url(../images/solarsystem.JPG);
+  background-position: 0 60%;
+  margin-top: 40px;
 }/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Andada+Pro:wght@400;600;800&display=swap" rel="stylesheet">
+    <title>Family Day in Prague</title>
+    <link rel="stylesheet" href="/css/style.css">
+
+</head> 
+<body>
+
+    <header>
+        
+        <p class="logo">Family Day in Prague</p>
+
+        <nav class="menu">
+           
+            <ul class="menu__list">
+
+                <li class="menu__item {{ 'menu__item--active' if page.fileSlug === ''}}"><a class="menu__link" href="/">Úvod</a></li>
+                <li class="menu__item {{ 'menu__item--active' if page.fileSlug === 'informace'}}"><a class="menu__link" href="/informace/">Informace</a></li>
+                <li class="menu__item {{ 'menu__item--active' if page.fileSlug === 'cena'}}"><a class="menu__link" href="/cena/">Cena</a></li>
+                <li class="menu__item {{ 'menu__item--active' if page.fileSlug === 'rezervace'}}"><a class="menu__link" href="/rezervace/">Rezervace</a></li>
+                <li class="menu__item {{ 'menu__item--active' if page.fileSlug === 'kontakt'}}"><a class="menu__link" href="/kontakt/">Kontakt</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main>
+
+    {{ content | safe }}
+
+    </main>
+
+    <footer>
+        <a class="footer__email" href="mailto:info@family-day-in-prague.com">info@family-day-in-prague.com</a>
+        <a class="footer__facebook" href="https://www.facebook.com/Family.Day.in.Prague" target="_blank">Facebook</a>
+        <span class="footer__tel">Tel.: +420 723 46 82 09</span>
+        <span class="footer__copyright">© Family Day in Prague</span>
+    </footer>
+
+</body>
+</html>

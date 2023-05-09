@@ -4,3 +4,12 @@
 @use "menu";
 @use "heros";
 @use "intro";
+@use "footer";
+@use "settings";
+
+
+.hero2--alt2 {
+    background-image: url(../images/solarsystem.JPG);
+    background-position: 0 60%;
+    margin-top: settings.$spacer * 2;
+}

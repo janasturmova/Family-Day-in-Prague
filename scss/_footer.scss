@@ -1,0 +1,18 @@
+@use "settings";
+
+
+footer {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	align-items: center;
+	padding: settings.$spacer;
+	margin-top: settings.$spacer * 3;
+	background-color: settings.$titlecolor;
+	color: white;
+}
+
+.footer__facebook,
+.footer__email{
+	color:white;
+}
