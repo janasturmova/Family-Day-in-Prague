@@ -1,6 +1,7 @@
 @use "settings";
 
-.logo {
+
+.logo__text {
     color: settings.$titlecolor;
 	font-family: settings.$titlefont;
 	font-size: 25px;
@@ -12,9 +13,13 @@
 	&::after {
 		content:" ";
 		display: block;
-		width: 306px;
+		width: 200px;
 		height: 2px;
 		background-color: settings.$titlecolor;
+
+		@media screen and (min-width: 350px) {
+			width: 306px;
+			}
 	}
 	&::before {
 		margin-bottom: -10px;

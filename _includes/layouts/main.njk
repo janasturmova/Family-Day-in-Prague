@@ -18,12 +18,12 @@
 
     <header>
         
-        <p class="logo">Family Day in Prague</p>
+        <div class="logo">
+            <p class="logo__text">Family Day in Prague</p>
+        </div>
 
         <nav class="menu">
-           
             <ul class="menu__list">
-
                 <li class="menu__item {{ 'menu__item--active' if page.fileSlug === ''}}"><a class="menu__link" href="/">Úvod</a></li>
                 <li class="menu__item {{ 'menu__item--active' if page.fileSlug === 'informace'}}"><a class="menu__link" href="/informace/">Informace</a></li>
                 <li class="menu__item {{ 'menu__item--active' if page.fileSlug === 'cena'}}"><a class="menu__link" href="/cena/">Cena</a></li>

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   box-sizing: border-box;
 }
@@ -6,12 +7,16 @@ html {
   box-sizing: inherit;
 }
 
+.link-in-text {
+  color: rgb(63, 32, 32);
+}
+
 body {
   font-family: "Andada Pro", serif;
   margin: 0;
   color: rgb(63, 32, 32);
 }
-@media screen and (min-width: 730px) {
+@media screen and (min-width: 700px) {
   body {
     font-size: 20px;
   }
@@ -29,7 +34,7 @@ header {
   }
 }
 
-.logo {
+.logo__text {
   color: rgb(63, 32, 32);
   font-family: "Inknut Antiqua", serif;
   font-size: 25px;
@@ -37,17 +42,22 @@ header {
   margin: 20px;
   margin-bottom: 10px;
 }
-.logo::before, .logo::after {
+.logo__text::before, .logo__text::after {
   content: " ";
   display: block;
-  width: 306px;
+  width: 200px;
   height: 2px;
   background-color: rgb(63, 32, 32);
 }
-.logo::before {
+@media screen and (min-width: 350px) {
+  .logo__text::before, .logo__text::after {
+    width: 306px;
+  }
+}
+.logo__text::before {
   margin-bottom: -10px;
 }
-.logo::after {
+.logo__text::after {
   margin-top: -10px;
 }
 
@@ -58,12 +68,23 @@ header {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 15px;
-  gap: 40px;
+  row-gap: 40px;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
 }
-@media screen and (min-width: 730px) {
+@media screen and (min-width: 700px) {
   .menu__list {
     display: flex;
     justify-content: space-between;
+  }
+}
+@media screen and (min-width: 1150px) {
+  .menu__list {
+    display: grid;
+    grid-template-columns: repeat(5, 120px);
+    -moz-column-gap: 20px;
+         column-gap: 20px;
+    justify-items: center;
   }
 }
 
@@ -89,7 +110,7 @@ header {
   background-size: cover;
   background-position: 50% 20%;
 }
-@media screen and (min-width: 730px) {
+@media screen and (min-width: 700px) {
   .hero {
     height: 500px;
     background-attachment: fixed;
@@ -105,7 +126,7 @@ header {
   font-family: "Inknut Antiqua", serif;
   padding-top: 50px;
 }
-@media screen and (min-width: 730px) {
+@media screen and (min-width: 700px) {
   .hero__title {
     font-size: 40px;
     font-weight: bold;
@@ -114,12 +135,12 @@ header {
 .hero__title::before, .hero__title::after {
   content: " ";
   display: block;
-  width: 306px;
+  width: 200px;
   height: 2px;
   background-color: white;
   box-shadow: 1px 1px 10px rgb(63, 32, 32);
 }
-@media screen and (min-width: 730px) {
+@media screen and (min-width: 700px) {
   .hero__title::before, .hero__title::after {
     width: 480px;
   }
@@ -140,7 +161,7 @@ header {
   font-family: "Andada Pro", serif;
 }
 
-/*----------------------------------------------------------*/
+/*--------------------úvodní stránka další dva hero--------------------------------------*/
 .hero2 {
   background-image: url(../images/zamecky1.jpg);
   width: 100vw;
@@ -150,9 +171,9 @@ header {
 .hero2--alt {
   background-image: url(../images/nalavicce1.jpg);
 }
-@media screen and (min-width: 730px) {
+@media screen and (min-width: 700px) {
   .hero2 {
-    height: 500px;
+    height: 400px;
     background-attachment: fixed;
     background-repeat: no-repeat;
     display: flex;
@@ -166,9 +187,9 @@ header {
   text-shadow: 1px 1px 10px rgb(63, 32, 32);
   font-size: 25px;
   font-family: "Inknut Antiqua", serif;
-  padding: 150px 0;
+  padding: 130px 0;
 }
-@media screen and (min-width: 730px) {
+@media screen and (min-width: 700px) {
   .hero2__title {
     font-size: 40px;
     font-weight: bold;
@@ -179,12 +200,12 @@ header {
 .hero2__title::before, .hero2__title::after {
   content: " ";
   display: block;
-  width: 306px;
+  width: 200px;
   height: 2px;
   background-color: white;
   box-shadow: 1px 1px 10px rgb(63, 32, 32);
 }
-@media screen and (min-width: 730px) {
+@media screen and (min-width: 700px) {
   .hero2__title::before, .hero2__title::after {
     width: 480px;
   }
@@ -196,11 +217,81 @@ header {
   margin: -10px auto;
 }
 
+/*-----------------hero pro informace---------------*/
+.hero2--alt2 {
+  background-image: url(../images/solarsystem.JPG);
+  background-position: 0 60%;
+  margin-top: 40px;
+}
+
+.hero2--alt2a {
+  background-image: url(../images/urybnika1.JPG);
+  margin-top: 40px;
+  height: 289px;
+  margin-bottom: 40px;
+}
+@media screen and (min-width: 700px) {
+  .hero2--alt2a {
+    display: none;
+  }
+}
+
+/*-------------------hero pro cenu-----------------*/
+.hero2--alt3 {
+  background-image: url(../images/okynka1.jpg);
+  background-position: 0 90%;
+  margin-top: 40px;
+}
+
+/*--------------------hero pro rezervace-------------*/
+.hero2--alt4 {
+  background-image: url(../images/podhoupackou.JPG);
+  background-position: 0 60%;
+  margin-top: 40px;
+}
+
+/*----------------hero pro kntakty---------------*/
+.hero2--alt5 {
+  background-image: url(../images/nadmapou.JPG);
+  margin-top: 40px;
+}
+
+/*------------zkouška-----------------*/
+/*
+.hero2 {
+	background-image: url(../images/zamecky1.jpg);
+	width: 100vw;
+	background-size: cover;
+	background-position: 50% 20%;
+	padding: 100px 0;
+}
+
+.hero2__title {
+	color: red;
+	text-shadow: 1px 1px 10px settings.$titlecolor;
+	font-size: 25px;
+	font-family: settings.$titlefont;
+
+	margin: settings.$spacer auto;
+
+}
+
+.hero2__title::before,
+.hero2__title::after {
+	content:" ";
+	display: block;
+	width: 100%;
+	height: 2px;
+	background-color: red;
+	box-shadow: 1px 1px 10px settings.$titlecolor;
+	}
+
+	*/
 .intro {
   max-width: 1000px;
   margin: 40px auto;
 }
-@media screen and (min-width: 730px) {
+@media screen and (min-width: 700px) {
   .intro {
     margin: 120px auto;
   }
@@ -218,7 +309,7 @@ header {
 .intro__image {
   display: none;
 }
-@media screen and (min-width: 730px) {
+@media screen and (min-width: 700px) {
   .intro__image {
     display: block;
     width: 400px;
@@ -238,7 +329,7 @@ header {
   margin: 20px;
   margin-bottom: 0;
 }
-@media screen and (min-width: 730px) {
+@media screen and (min-width: 700px) {
   .intro__text {
     text-align: justify;
   }
@@ -260,8 +351,25 @@ footer {
   color: white;
 }
 
-.hero2--alt2 {
-  background-image: url(../images/solarsystem.JPG);
-  background-position: 0 60%;
+.infos {
   margin-top: 40px;
+  max-width: 70vw;
+  margin: 0 auto;
+}
+
+.infos__headline {
+  text-align: center;
+  margin: 60px 40px 10px 40px;
+}
+
+.infos__text {
+  text-align: center;
+}
+
+.infos__image--width {
+  display: none;
+}
+
+.infos__image--height {
+  display: none;
 }/*# sourceMappingURL=style.css.map */

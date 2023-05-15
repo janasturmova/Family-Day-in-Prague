@@ -1,0 +1,19 @@
+html {
+  box-sizing: border-box;
+}
+
+*, ::after, ::before {
+  box-sizing: inherit;
+}
+
+header {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 1150px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: first baseline;
+  }
+}/*# sourceMappingURL=header.css.map */

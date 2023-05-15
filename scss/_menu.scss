@@ -7,12 +7,20 @@
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	grid-template-rows: 15px;
-	gap: settings.$spacer * 2;
+	row-gap: settings.$spacer *2;
+	column-gap: settings.$spacer;
 
 	
-	@media screen and (min-width: 730px) {
+	@media screen and (min-width: settings.$breakpoint1) {
 		display: flex;
 		justify-content: space-between;
+	}
+
+	@media screen and (min-width: 1150px) {
+		display: grid;
+		grid-template-columns: repeat(5, 120px);
+		column-gap: 20px;
+		justify-items: center;
 	}
 }	
 
