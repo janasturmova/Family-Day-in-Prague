@@ -1,13 +1,4 @@
-@use "body";
-@use "header";
-@use "logo";
-@use "menu";
-@use "heros";
-@use "intro";
-@use "footer";
 @use "settings";
-@use "informace";
-
 
 
 .infos {
@@ -35,7 +26,7 @@
     margin: 60px 40px 10px 40px;
 
     @media  screen and (min-width: settings.$breakpoint1) {
-        margin: 60px 0 10px 0;
+        margin: 60px 20px 10px 20px;
     }
 }
 
@@ -66,4 +57,3 @@
 		border-radius: 5px
     }
 }
-

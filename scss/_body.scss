@@ -5,7 +5,4 @@ body {
     margin: 0;
 	color: settings.$titlecolor;
 
-    @media screen and (min-width: settings.$breakpoint1) {
-        font-size: 20px;
-    }
 }
