@@ -6,3 +6,75 @@ title: Rezervace
 <div class="hero2 hero2--alt4">
     <h2 class="hero2__title"> Rezervace </h2>
 </div>
+
+<h3>Termín je nutné si zarezervovat alespoň 2 dny předem</h3>
+
+<form class="form-info" method="get" action="#">
+
+    <div class="form-field">
+        <label for="name">Jméno a příjmení <span class="required">*</span> </label>
+        <input type="text" name="name" id="name" required>
+    </div>
+
+    <div class="form-field">
+        <label for="email">E-mail <span class="required">*</span> </label>
+        <input type="email" name="email" id="email" required>
+    </div>
+
+
+    <div class="form-field">
+        <label for="phone">Telefon<span class="required">*</span></label>
+        <input type="tel" name="phone" id="phone">
+    </div>
+
+    <div class="form-field">
+        <label for="number" min="2" max="8">Počet osob<span class="required">*</span> </label>
+        <input type="number" name="number" id="number" required>
+    </div>
+
+    <div class="form-field">
+        <label for="date">Datum<span class="required">*</span> </label>
+        <input type="date" name="date" id="date" required>
+    </div>
+
+    <div class="form-field">
+        <label for="time">Čas<span class="required">*</span> </label>
+
+        <input type="radio" name="time" id="time1" value="9-12" required>
+        <label for="time1">9:00 - 12:00</label>
+
+        <input type="radio" name="time" id="time2" value="13-16" required>
+        <label for="time2">13:00 - 16:00</label>
+
+        <input type="radio" name="time" id="time3" value="17-20" required>
+        <label for="time3">17:00 - 20:00</label>
+        
+    </div>
+
+    <div class="form-field">
+        <label for="payment">Způsob platby<span class="required">*</span> </label>
+
+        <input type="radio" name="payment" id="payment1" value="hotově" required>
+        <label for="payment1">hotově na místě</label>
+
+        <input type="radio" name="time" id="payment2" value="bankovním převodem" required>
+        <label for="pamyment2">bankovním převodem</label>
+
+        <p class="text-in-form">Fakturu Vám zašleme e-mailem.</p>
+        
+    </div>  
+
+    <div class="form-field">
+        <label for="notice">Zpráva</label>
+        <textarea name="notice" id="notice" rows="10"></textarea>
+    </div>
+
+    <button type="submit">Odeslat</button>
+
+</form>
+
+<div class="form-intro">
+    <h3 class="form-intro__headline">Změna termínu a storno</h3>
+    <p class="form-intro__text">Změnu termínu nebo storno již zarezervované hry lze provést <a class="link-in-text" href="mailto:info@family-day-in-prague.com">e-mailem</a> a to alespoň jeden den předem </p>
+    <p class="form-intro__text">Pokud hru stornujete a již jste za ní zaplatili bankovním převodem, tak Vám eníze vrátíme zpět.</p>
+</div>

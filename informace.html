@@ -50,5 +50,30 @@ title: Informace
         <img class="infos__image--height" src="/images/naddenikem.JPG" alt="Porada nad deníkem">
 </div>
 
+<div class="form-intro">
+    <h3 class="form-intro__headline">Máte další dotazy?</h3>
+    <p class="form-intro__text">Neváhejte nás kontaktovat.</p>
+</div>
 
+<form class="form-info" method="get" action="#">
+
+    <div class="form-field">
+        <label for="name">Jméno a příjmení <span class="required">*</span> </label>
+        <input type="text" name="name" id="name" required>
+    </div>
+
+    <div class="form-field">
+        <label for="email">E-mail <span class="required">*</span> </label>
+        <input type="email" name="email" id="email" required>
+    </div>
+
+
+    <div class="form-field">
+        <label for="notice">Zpráva<span class="required">*</span></label>
+        <textarea name="notice" id="notice" rows="10"></textarea>
+    </div>
+
+    <button type="submit">Odeslat</button>
+
+</form>
 
