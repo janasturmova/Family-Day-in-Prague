@@ -55,25 +55,25 @@ title: Informace
     <p class="form-intro__text">Neváhejte nás kontaktovat.</p>
 </div>
 
-<form class="form-info" method="get" action="#">
+<form class="form" method="get" action="#">
 
-    <div class="form-field">
-        <label for="name">Jméno a příjmení <span class="required">*</span> </label>
-        <input type="text" name="name" id="name" required>
+    <div class="form__field">
+        <label class="form__label" for="name">Jméno a příjmení* </label>
+        <input class="form__input" type="text" name="name" id="name" required>
     </div>
 
-    <div class="form-field">
-        <label for="email">E-mail <span class="required">*</span> </label>
-        <input type="email" name="email" id="email" required>
+    <div class="form__field">
+        <label class="form__label" for="email">E-mail* </label>
+        <input class="form__input" type="email" name="email" id="email" required>
     </div>
 
 
-    <div class="form-field">
-        <label for="notice">Zpráva<span class="required">*</span></label>
-        <textarea name="notice" id="notice" rows="10"></textarea>
+    <div class="form__field">
+        <label class="form__label" for="notice">Zpráva*</label>
+        <textarea class="form__textarea" name="notice" id="notice" rows="10"></textarea>
     </div>
 
-    <button type="submit">Odeslat</button>
+    <button class="form__button" type="submit">Odeslat</button>
 
 </form>
 
