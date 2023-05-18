@@ -190,7 +190,7 @@ header {
     font-size: 40px;
     font-weight: bold;
     padding: 0;
-    margin: 200px auto;
+    margin: auto;
   }
 }
 .hero2__title::before, .hero2__title::after {
@@ -244,6 +244,7 @@ header {
   background-image: url(../images/podhoupackou.JPG);
   background-position: 0 60%;
   margin-top: 40px;
+  position: relative;
 }
 
 /*----------------hero pro kntakty---------------*/
@@ -381,11 +382,15 @@ footer {
   padding: 0 20px;
   text-align: center;
 }
+.form-intro--alt {
+  margin-top: 0;
+}
 
 .form {
   width: 100%;
   max-width: 300px;
   margin: 0 auto;
+  padding: 20px;
 }
 
 .form__label {
@@ -401,6 +406,10 @@ footer {
   font-size: 16px;
   color: rgb(63, 32, 32);
   padding: 5px;
+}
+.form__input:focus,
+.form__textarea:focus {
+  outline: 1px solid rgb(63, 32, 32);
 }
 
 .form__field {
@@ -432,4 +441,73 @@ footer {
 
 .text-in-form {
   text-align: center;
+  font-weight: bold;
+}
+
+.answer {
+  opacity: 0.5;
+}
+
+.answer__text {
+  margin-top: 0;
+  margin-bottom: 50px;
+}
+
+.answer__box {
+  display: block;
+  width: 70vw;
+  max-width: 500px;
+  text-align: center;
+  padding: 40px;
+  border: 2px solid rgb(63, 32, 32);
+  border-radius: 3px;
+  background-color: rgb(182, 152, 152);
+  position: absolute;
+  right: 0;
+  left: 0;
+  margin: -300px auto;
+}
+
+.answer__button {
+  background-color: rgb(63, 32, 32);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 3px;
+  font-size: 16px;
+  border: 0;
+  display: inline-block;
+  margin: 0 auto;
+  text-decoration: none;
+}
+
+.price {
+  margin: 40px 20px;
+}
+
+.price__headline,
+.price__text {
+  text-align: center;
+  margin: 40px;
+  line-height: 1.5em;
+}
+
+.price__list {
+  margin: 0 auto;
+  border-spacing: 0;
+}
+
+.price__row td {
+  border-bottom: 1px solid rgb(63, 32, 32);
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.price__right {
+  text-align: right;
+  padding-left: 70px;
+}
+@media screen and (min-width: 700px) {
+  .price__right {
+    padding-left: 200px;
+  }
 }/*# sourceMappingURL=style.css.map */

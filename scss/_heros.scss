@@ -95,7 +95,7 @@
 		font-size: 40px;
 		font-weight: bold;
 		padding: 0;
-		margin: 200px auto;
+		margin: auto;
 	}
 
 	&::before,
@@ -156,6 +156,7 @@
     background-image: url(../images/podhoupackou.JPG);
     background-position: 0 60%;
     margin-top: settings.$spacer * 2;
+	position: relative;
 }
 
 /*----------------hero pro kntakty---------------*/

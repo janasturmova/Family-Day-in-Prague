@@ -1,0 +1,32 @@
+@use "settings";
+
+.price {
+    margin: 40px 20px;
+}
+
+.price__headline,
+.price__text {
+    text-align: center;
+    margin: settings.$spacer *2;
+    line-height: 1.5em;
+}
+
+.price__list {
+    margin: 0 auto;
+    border-spacing: 0;
+}
+
+.price__row td {
+    border-bottom: 1px solid settings.$titlecolor;; 
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.price__right {
+    text-align: right;
+    padding-left: 70px;
+
+    @media screen and (min-width: settings.$breakpoint1) {
+        padding-left: 200px;
+    }
+}

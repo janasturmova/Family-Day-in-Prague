@@ -1,0 +1,39 @@
+@use "settings";
+
+.answer {
+    opacity: 0.5;
+}
+
+.answer__text {
+    margin-top: 0;
+    margin-bottom: 50px;
+}
+
+
+.answer__box {
+    display: block;
+    width: 70vw;
+    max-width: 500px;
+    text-align: center;
+    padding: 40px;
+    border: 2px solid settings.$titlecolor;
+    border-radius: 3px;
+    background-color: rgb(182, 152, 152);
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: -300px auto;
+}
+
+.answer__button {
+    background-color: settings.$titlecolor;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 3px;
+    font-size: 16px;
+    border: 0;
+    display: inline-block;
+    margin: 0 auto;
+    text-decoration: none;
+
+}

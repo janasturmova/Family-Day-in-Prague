@@ -11,7 +11,9 @@ title: Rezervace
     <h3>Termín je nutné si zarezervovat alespoň 2 dny předem</h3>
 </div>
 
-<form class="form" method="get" action="#">
+<form class="form" method="post" action="https://submit-form.com/K1zjDVNg">
+
+    <input type="hidden" name="_redirect" value="#"/>
 
     <div class="form__field">
         <label class="form__label" for="name">Jméno a příjmení* </label>
@@ -26,7 +28,7 @@ title: Rezervace
 
     <div class="form__field">
         <label class="form__label" for="phone">Telefon*</label>
-        <input class="form__input" type="tel" name="phone" id="phone">
+        <input class="form__input" type="tel" name="phone" id="phone" required>
     </div>
 
     <div class="form__field">
@@ -38,8 +40,6 @@ title: Rezervace
         <label class="form__label" for="date">Datum* </label>
         <input class="form__input" type="date" name="date" id="date" required>
     </div>
-
-    
 
     <div class="form__field">
 
@@ -88,8 +88,8 @@ title: Rezervace
 
 </form>
 
-<div class="form-intro">
+<div class="form-intro form-intro--alt">
     <h3 class="form-intro__headline">Změna termínu a storno</h3>
     <p class="form-intro__text">Změnu termínu nebo storno již zarezervované hry lze provést <a class="link-in-text" href="mailto:info@family-day-in-prague.com">e-mailem</a> a to alespoň jeden den předem </p>
-    <p class="form-intro__text">Pokud hru stornujete a již jste za ní zaplatili bankovním převodem, tak Vám eníze vrátíme zpět.</p>
+    <p class="form-intro__text">Pokud hru stornujete a již jste za ní zaplatili bankovním převodem, tak Vám peníze vrátíme zpět.</p>
 </div>
