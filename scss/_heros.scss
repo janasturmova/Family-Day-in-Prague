@@ -7,7 +7,7 @@
 	background-position: 50% 20%;
 	
 	@media screen and (min-width: settings.$breakpoint1) {
-		height: 500px;
+		height: 450px;
 		background-attachment: fixed;
 		background-repeat: no-repeat;
 	}
@@ -27,8 +27,8 @@
 	text-shadow: 1px 1px 10px settings.$titlecolor;
 	font-size: 25px;
 	font-family: settings.$titlefont;
-	padding-top: 50px;
-	
+	padding-top: 70px;
+	margin: 0;
 
 	@media screen and (min-width: settings.$breakpoint1) {
 		font-size: 40px;
@@ -82,7 +82,7 @@
 	}
 	
 	@media screen and (min-width: settings.$breakpoint1) {
-		height: 400px;
+		height: 450px;
 		background-attachment: fixed;
 		background-repeat: no-repeat;
 		display: flex;
@@ -139,14 +139,14 @@
 .hero2--alt2 {
     background-image: url(../images/solarsystem.JPG);
     background-position: 0 60%;
-    margin-top: settings.$spacer * 2;
+    margin-top: settings.$spacer;
 }
 
 .hero2--alt2a {
 	background-image: url(../images/urybnika1.JPG);
     margin-top: settings.$spacer * 2;
 	height: 289px;
-	margin-bottom: settings.$spacer * 2;
+	margin-bottom: settings.$spacer;
 
 	@media screen and (min-width: settings.$breakpoint1){
 		display: none;
@@ -159,7 +159,7 @@
 .hero2--alt3 {
     background-image: url(../images/okynka1.jpg);
     background-position: 0 90%;
-    margin-top: settings.$spacer * 2;
+    margin-top: settings.$spacer;
 }
 
 /*--------------------hero pro rezervace-------------*/
@@ -167,7 +167,7 @@
 .hero2--alt4 {
     background-image: url(../images/podhoupackou.JPG);
     background-position: 0 50%;
-    margin-top: settings.$spacer * 2;
+    margin-top: settings.$spacer;
 }
 
 /*----------------hero pro kntakty---------------*/
@@ -175,6 +175,6 @@
 .hero2--alt5 {
     background-image: url(../images/nadmapou.JPG);
 
-    margin-top: settings.$spacer * 2;
+    margin-top: settings.$spacer;
 }
 

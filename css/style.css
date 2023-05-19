@@ -56,10 +56,17 @@ header {
   margin-top: -10px;
 }
 
+.menu {
+  position: relative;
+}
+
 .menu__checkbox {
   position: absolute;
   left: -9999px;
-  /*display: none;*/
+}
+
+.menu__checkbox:checked ~ .menu__list {
+  transform: translateX(160px);
 }
 
 .menu__toggler {
@@ -69,9 +76,10 @@ header {
   margin: 20px 20px 0 20px;
   display: inline-block;
 }
-
-.menu {
-  position: relative;
+@media screen and (min-width: 700px) {
+  .menu__toggler {
+    display: none;
+  }
 }
 
 .menu__list {
@@ -85,9 +93,36 @@ header {
   width: 150px;
   transition: transform 0.5s;
 }
+@media screen and (min-width: 700px) {
+  .menu__list {
+    position: relative;
+    left: 0;
+    top: 0;
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    -moz-column-gap: 20%;
+         column-gap: 20%;
+    justify-items: center;
+    margin: 20px;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1150px) {
+  .menu__list {
+    grid-template-columns: repeat(5, 120px);
+    -moz-column-gap: 20px;
+         column-gap: 20px;
+  }
+}
 
 .menu__item {
-  border-bottom: 1px solid white;
+  border-top: 1px solid white;
+}
+@media screen and (min-width: 700px) {
+  .menu__item {
+    border: 0;
+  }
 }
 
 .menu__link {
@@ -96,13 +131,28 @@ header {
   text-decoration: none;
   color: white;
 }
-
 .menu__link:hover {
-  background-color: rgb(175, 69, 50);
+  background-color: rgb(92, 48, 48);
+}
+@media screen and (min-width: 700px) {
+  .menu__link {
+    padding: 0;
+    color: rgb(63, 32, 32);
+    background-color: none;
+    font-family: "Inknut Antiqua", serif;
+    font-size: 16px;
+  }
+  .menu__link:hover {
+    font-weight: bold;
+    background-color: white;
+  }
 }
 
-.menu__checkbox:checked ~ .menu__list {
-  transform: translateX(160px);
+@media screen and (min-width: 700px) {
+  .menu__item--active .menu__link {
+    text-decoration-line: underline;
+    font-weight: bold;
+  }
 }
 
 /*
@@ -155,7 +205,7 @@ header {
 }
 @media screen and (min-width: 700px) {
   .hero {
-    height: 500px;
+    height: 450px;
     background-attachment: fixed;
     background-repeat: no-repeat;
   }
@@ -173,7 +223,8 @@ header {
   text-shadow: 1px 1px 10px rgb(63, 32, 32);
   font-size: 25px;
   font-family: "Inknut Antiqua", serif;
-  padding-top: 50px;
+  padding-top: 70px;
+  margin: 0;
 }
 @media screen and (min-width: 700px) {
   .hero__title {
@@ -223,7 +274,7 @@ header {
 }
 @media screen and (min-width: 700px) {
   .hero2 {
-    height: 400px;
+    height: 450px;
     background-attachment: fixed;
     background-repeat: no-repeat;
     display: flex;
@@ -276,14 +327,14 @@ header {
 .hero2--alt2 {
   background-image: url(../images/solarsystem.JPG);
   background-position: 0 60%;
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 .hero2--alt2a {
   background-image: url(../images/urybnika1.JPG);
   margin-top: 40px;
   height: 289px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 @media screen and (min-width: 700px) {
   .hero2--alt2a {
@@ -295,20 +346,20 @@ header {
 .hero2--alt3 {
   background-image: url(../images/okynka1.jpg);
   background-position: 0 90%;
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 /*--------------------hero pro rezervace-------------*/
 .hero2--alt4 {
   background-image: url(../images/podhoupackou.JPG);
   background-position: 0 50%;
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 /*----------------hero pro kntakty---------------*/
 .hero2--alt5 {
   background-image: url(../images/nadmapou.JPG);
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 .intro {
