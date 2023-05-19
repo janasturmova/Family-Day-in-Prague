@@ -56,50 +56,97 @@ header {
   margin-top: -10px;
 }
 
+.menu__checkbox {
+  position: absolute;
+  left: -9999px;
+  /*display: none;*/
+}
+
+.menu__toggler {
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 25px;
+  margin: 20px 20px 0 20px;
+  display: inline-block;
+}
+
+.menu {
+  position: relative;
+}
+
 .menu__list {
-  margin: 20px;
+  position: absolute;
+  left: -160px;
+  top: 55px;
+  margin: 0;
   padding: 0;
   list-style: none;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 15px;
-  row-gap: 40px;
-  -moz-column-gap: 20px;
-       column-gap: 20px;
+  background-color: rgb(63, 32, 32);
+  width: 150px;
+  transition: transform 0.5s;
 }
-@media screen and (min-width: 700px) {
-  .menu__list {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    -moz-column-gap: 20px;
-         column-gap: 20px;
-    justify-items: center;
-  }
-}
-@media screen and (min-width: 1150px) {
-  .menu__list {
-    grid-template-columns: repeat(5, 120px);
-    -moz-column-gap: 20px;
-         column-gap: 20px;
-  }
+
+.menu__item {
+  border-bottom: 1px solid white;
 }
 
 .menu__link {
-  font-family: "Inknut Antiqua", serif;
   display: block;
+  padding: 15px;
   text-decoration: none;
-  color: rgb(63, 32, 32);
-  font-family: "Inknut Antiqua", serif;
+  color: white;
 }
+
 .menu__link:hover {
-  font-weight: bold;
+  background-color: rgb(175, 69, 50);
+}
+
+.menu__checkbox:checked ~ .menu__list {
+  transform: translateX(160px);
+}
+
+/*
+.menu__list {
+	margin: settings.$spacer;
+	padding: 0;
+	list-style: none;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: 15px;
+	row-gap: settings.$spacer *2;
+	column-gap: settings.$spacer;
+
+
+	@media screen and (min-width: settings.$breakpoint1) {
+		display: grid;
+		grid-template-columns: repeat(5, 1fr);
+		column-gap: 20px;
+		justify-items: center;
+	}
+
+	@media screen and (min-width: settings.$breakpoint2) {
+		grid-template-columns: repeat(5, 120px);
+		column-gap: 20px;
+	}
+}	
+
+.menu__link {
+	font-family: settings.$titlefont;
+	display: block;
+	text-decoration: none;
+	color: settings.$titlecolor;
+	font-family: settings.$titlefont;
+
+	&:hover {
+		font-weight: bold;
+	}
 }
 
 .menu__item--active .menu__link {
-  text-decoration-line: underline;
-  font-weight: bold;
-}
-
+	text-decoration-line: underline;
+		font-weight: bold;
+  }
+  */
 .hero {
   background-image: url(../images/uzdi.jpg);
   width: 100vw;
@@ -111,6 +158,12 @@ header {
     height: 500px;
     background-attachment: fixed;
     background-repeat: no-repeat;
+  }
+}
+@media screen and (min-width: 2000px) {
+  .hero {
+    height: 700px;
+    background-position: 50% 0;
   }
 }
 
@@ -174,6 +227,12 @@ header {
     background-attachment: fixed;
     background-repeat: no-repeat;
     display: flex;
+  }
+}
+@media screen and (min-width: 2000px) {
+  .hero2 {
+    height: 600px;
+    background-position: 50% 0;
   }
 }
 
@@ -242,9 +301,8 @@ header {
 /*--------------------hero pro rezervace-------------*/
 .hero2--alt4 {
   background-image: url(../images/podhoupackou.JPG);
-  background-position: 0 60%;
+  background-position: 0 50%;
   margin-top: 40px;
-  position: relative;
 }
 
 /*----------------hero pro kntakty---------------*/

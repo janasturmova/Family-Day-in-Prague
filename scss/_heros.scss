@@ -12,6 +12,13 @@
 		background-repeat: no-repeat;
 	}
 
+	@media screen and (min-width: 2000px) {
+		height: 700px;
+		background-position: 50% 0;
+	}
+
+
+
 }
 
 .hero__title {
@@ -79,6 +86,11 @@
 		background-attachment: fixed;
 		background-repeat: no-repeat;
 		display: flex;
+	}
+
+	@media screen and (min-width: 2000px) {
+		height: 600px;
+		background-position: 50% 0;
 	}
 }
 
@@ -154,9 +166,8 @@
 
 .hero2--alt4 {
     background-image: url(../images/podhoupackou.JPG);
-    background-position: 0 60%;
+    background-position: 0 50%;
     margin-top: settings.$spacer * 2;
-	position: relative;
 }
 
 /*----------------hero pro kntakty---------------*/

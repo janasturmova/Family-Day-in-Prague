@@ -23,6 +23,10 @@
         </div>
 
         <nav class="menu">
+
+            <input type="checkbox" class="menu__checkbox" id="menu-checkbox">
+            <label for="menu-checkbox" class="menu__toggler">☰ Menu</label>
+            
             <ul class="menu__list">
                 <li class="menu__item {{ 'menu__item--active' if page.fileSlug === ''}}"><a class="menu__link" href="/">Úvod</a></li>
                 <li class="menu__item {{ 'menu__item--active' if page.fileSlug === 'informace'}}"><a class="menu__link" href="/informace/">Informace</a></li>
