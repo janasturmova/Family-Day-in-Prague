@@ -479,6 +479,9 @@ footer {
   margin: 0 auto;
   text-decoration: none;
 }
+.answer__button:hover {
+  background-color: rgb(92, 48, 48);
+}
 
 .price {
   margin: 40px 20px;
