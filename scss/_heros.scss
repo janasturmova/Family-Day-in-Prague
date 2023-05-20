@@ -5,6 +5,7 @@
 	width: 100vw;
 	background-size: cover;
 	background-position: 50% 20%;
+	margin-top: settings.$spacer;
 	
 	@media screen and (min-width: settings.$breakpoint1) {
 		height: 450px;
@@ -174,7 +175,17 @@
 
 .hero2--alt5 {
     background-image: url(../images/nadmapou.JPG);
-
     margin-top: settings.$spacer;
+}
+
+.hero2--alt6 {
+	background-image: url(../images/babies.JPG);
+    margin-top: settings.$spacer * 2;
+	height: 289px;
+	margin-bottom: settings.$spacer;
+
+	@media screen and (min-width: settings.$breakpoint1){
+		display: none;
+	}
 }
 

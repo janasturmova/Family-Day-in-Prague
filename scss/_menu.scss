@@ -16,7 +16,7 @@
 .menu__toggler {
 	cursor: pointer;
 	font-weight: bold;
-	font-size: 25px;
+	font-size: 20px;
 	margin: 20px 20px 0 20px;
 	display: inline-block;
 
@@ -44,15 +44,13 @@
 		background-color: white;
 		display: grid;
 		grid-template-columns: repeat(5, 1fr);
-		column-gap: 20%;
+		column-gap: 20px;
 		justify-items: center;
-		margin: 20px;
 		width: 100%;
 	}
 
 	@media screen and (min-width: settings.$breakpoint2) {
 		grid-template-columns: repeat(5, 120px);
-		column-gap: 20px;
 	}
 }
 

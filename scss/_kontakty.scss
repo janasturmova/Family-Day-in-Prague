@@ -1,0 +1,58 @@
+@use "settings";
+
+.contact {
+    margin: 20px auto;
+}
+
+.contact__headline {
+    text-align: center;
+    margin: settings.$spacer *2;
+}
+
+.contact {
+    margin: 0 auto;
+    border-spacing: 0;
+    padding: 20px;
+}
+
+.contact__list td {
+    padding-bottom: 10px;
+}
+
+.contact__right {
+    text-align: right;
+    padding-left: 20px;
+}
+
+.meeting-point__image {
+    display: none;
+
+    @media  screen and (min-width: settings.$breakpoint1) {
+        display: block;
+		width: 400px;
+		margin: settings.$spacer*2;
+		margin-bottom: 0;
+		border-radius: 5px
+    }
+}
+
+.meeting-point {
+    margin: 40px auto;
+    text-align: center;
+    max-width: settings.$maxwidth;
+
+    @media  screen and (min-width: settings.$breakpoint1) {
+        display: flex; 
+        align-items: center; 
+        text-align: left;
+        margin-top: settings.$spacer * 3;
+    }
+
+    &--alt { 
+    @media  screen and (min-width: settings.$breakpoint1){
+        flex-direction: row-reverse;
+        text-align: left;
+         }
+    }
+}
+
