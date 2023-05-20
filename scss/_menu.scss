@@ -16,7 +16,7 @@
 .menu__toggler {
 	cursor: pointer;
 	font-weight: bold;
-	font-size: 20px;
+	font-size: settings.$spacer;
 	margin: 20px 20px 0 20px;
 	display: inline-block;
 
@@ -44,7 +44,7 @@
 		background-color: white;
 		display: grid;
 		grid-template-columns: repeat(5, 1fr);
-		column-gap: 20px;
+		column-gap: settings.$spacer;
 		justify-items: center;
 		width: 100%;
 	}

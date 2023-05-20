@@ -1,7 +1,7 @@
 @use "settings";
 
 .price {
-    margin: 40px 20px;
+    margin: settings.$spacer *2 auto;
 }
 
 .price__headline,
@@ -29,4 +29,8 @@
     @media screen and (min-width: settings.$breakpoint1) {
         padding-left: 200px;
     }
+}
+
+.price__box {
+    display: flex;
 }

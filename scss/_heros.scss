@@ -103,6 +103,7 @@
 	font-size: 25px;
 	font-family: settings.$titlefont;
 	padding: 130px 0;
+	margin-bottom: 0;
 	
 	@media screen and (min-width: settings.$breakpoint1) {
 		font-size: 40px;

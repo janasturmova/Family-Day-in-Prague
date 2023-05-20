@@ -1,9 +1,5 @@
 @use "settings";
 
-.contact {
-    margin: 20px auto;
-}
-
 .contact__headline {
     text-align: center;
     margin: settings.$spacer *2;
@@ -12,7 +8,7 @@
 .contact {
     margin: 0 auto;
     border-spacing: 0;
-    padding: 20px;
+    padding: 0 settings.$spacer;
 }
 
 .contact__list td {
@@ -20,8 +16,14 @@
 }
 
 .contact__right {
-    text-align: right;
-    padding-left: 20px;
+    text-align: left;
+    padding-left: settings.$spacer;
+
+    @media  screen and (min-width: settings.$breakpoint1) {
+        padding-left: settings.$spacer * 4;
+    }
+
+
 }
 
 .meeting-point__image {
@@ -37,7 +39,8 @@
 }
 
 .meeting-point {
-    margin: 40px auto;
+    margin: settings.$spacer *4 auto;
+    padding: 0 settings.$spacer;
     text-align: center;
     max-width: settings.$maxwidth;
 

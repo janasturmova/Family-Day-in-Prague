@@ -4,7 +4,7 @@
 footer {
 	display: flex;
 	flex-direction: column;
-	gap: 20px;
+	gap: settings.$spacer;
 	align-items: center;
 	padding: settings.$spacer;
 	margin-top: settings.$spacer * 3;

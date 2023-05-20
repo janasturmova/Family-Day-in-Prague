@@ -1,5 +1,8 @@
 @use "settings";
 
+.logo {
+	display: inline-block;
+}
 
 .logo__text {
     color: settings.$titlecolor;
@@ -13,7 +16,7 @@
 	&::after {
 		content:" ";
 		display: block;
-		width: 200px;
+		width: 100%;
 		height: 2px;
 		background-color: settings.$titlecolor;
 

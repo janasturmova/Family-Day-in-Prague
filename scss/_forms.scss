@@ -1,22 +1,16 @@
 @use "settings";
 
 .form-intro {
-    margin: 100px auto 40px;
-    padding: 0 20px;
-    text-align: center;
-
-    &--alt {
-        margin-top: 0;
-    }
+    margin: settings.$spacer *2 auto;
+    padding: 0 settings.$spacer;
+    text-align: center;    
 }
-
-
 
 .form {
     width: 100%;
     max-width: 300px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 0 settings.$spacer;
 }
 
 .form__label {
@@ -39,7 +33,7 @@
 }
 
 .form__field {
-    margin-bottom: 20px;   
+    margin-bottom: settings.$spacer;   
 }
 
 .form__radio {
@@ -49,12 +43,12 @@
 .form__button {
     background-color: settings.$titlecolor;
     color: white;
-    padding: 10px 20px;
+    padding: 10px settings.$spacer;
     border-radius: 3px;
     font-size: 16px;
     border: 0;
     display: block;
-    margin: 0 auto 40px;
+    margin: 0 auto;
 
     &:hover {
         background-color: rgb(92, 48, 48);
@@ -63,7 +57,7 @@
 
 .form__radio {
     display: block;
-    margin: 5px 20px;
+    margin: 5px settings.$spacer;
 }
 
 .text-in-form {
