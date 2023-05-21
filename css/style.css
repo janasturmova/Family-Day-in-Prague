@@ -182,7 +182,7 @@ header {
 }
 @media screen and (min-width: 2000px) {
   .hero {
-    height: 700px;
+    height: 900px;
     background-position: 50% 0;
   }
 }
