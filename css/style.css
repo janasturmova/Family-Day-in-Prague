@@ -180,9 +180,9 @@ header {
     background-repeat: no-repeat;
   }
 }
-@media screen and (min-width: 2000px) {
+@media screen and (min-width: 1500px) {
   .hero {
-    height: 900px;
+    height: 700px;
     background-position: 50% 0;
   }
 }
@@ -250,9 +250,9 @@ header {
     display: flex;
   }
 }
-@media screen and (min-width: 2000px) {
+@media screen and (min-width: 1500px) {
   .hero2 {
-    height: 900px;
+    height: 700px;
     background-position: 50% 0;
   }
 }

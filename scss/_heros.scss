@@ -1,4 +1,4 @@
-@use "base/settings";
+@use "settings";
 
 
 .hero {
@@ -14,8 +14,8 @@
 		background-repeat: no-repeat;
 	}
 
-	@media screen and (min-width: 2000px) {
-		height: 900px;
+	@media screen and (min-width: 1500px) {
+		height: 700px;
 		background-position: 50% 0;
 	}
 }
@@ -86,8 +86,8 @@
 		display: flex;
 	}
 
-	@media screen and (min-width: 2000px) {
-		height: 900px;
+	@media screen and (min-width: 1500px) {
+		height: 700px;
 		background-position: 50% 0;
 	}
 }
