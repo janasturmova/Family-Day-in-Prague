@@ -3,7 +3,15 @@
 .form-intro {
     margin: settings.$spacer *2 auto;
     padding: 0 settings.$spacer;
-    text-align: center;    
+    text-align: center;  
+
+    @media screen and (min-width: settings.$breakpoint1) {
+        margin-top: settings.$spacer *4;
+    }
+
+    &--alt {
+        margin-top: settings.$spacer *2;
+    }
 }
 
 .form {

@@ -6,14 +6,13 @@
 	margin: settings.$spacer*2 auto;
 
 	@media screen and (min-width: settings.$breakpoint1) {
-		margin: settings.$spacer*6 auto;
+		margin: settings.$spacer*4 auto;
 	}
 
 	&--alt {
 		flex-direction: row-reverse;
 	}
 }
-
 
 .intro__title {
 	font-size: settings.$titlefont;

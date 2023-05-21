@@ -17,9 +17,6 @@
 		height: 700px;
 		background-position: 50% 0;
 	}
-
-
-
 }
 
 .hero__title {
@@ -67,7 +64,6 @@
 	font-size: 25px;
 	font-family: settings.$mainfont;
 }
-
 
 /*--------------------úvodní stránka další dva hero--------------------------------------*/
 
@@ -177,6 +173,10 @@
 .hero2--alt5 {
     background-image: url(../images/nadmapou.JPG);
     margin-top: settings.$spacer;
+
+	@media screen and (min-width: settings.$breakpoint2){
+		background-position: 0 10%;
+	}
 }
 
 .hero2--alt6 {

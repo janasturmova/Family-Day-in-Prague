@@ -41,6 +41,16 @@ header {
   margin: 20px;
   margin-bottom: 10px;
 }
+@media screen and (min-width: 700px) {
+  .logo__text {
+    margin: 20px;
+  }
+}
+@media screen and (min-width: 1150px) {
+  .logo__text {
+    margin-bottom: 40px;
+  }
+}
 .logo__text::before, .logo__text::after {
   content: " ";
   display: block;
@@ -156,48 +166,6 @@ header {
   }
 }
 
-/*
-.menu__list {
-	margin: settings.$spacer;
-	padding: 0;
-	list-style: none;
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	grid-template-rows: 15px;
-	row-gap: settings.$spacer *2;
-	column-gap: settings.$spacer;
-
-
-	@media screen and (min-width: settings.$breakpoint1) {
-		display: grid;
-		grid-template-columns: repeat(5, 1fr);
-		column-gap: 20px;
-		justify-items: center;
-	}
-
-	@media screen and (min-width: settings.$breakpoint2) {
-		grid-template-columns: repeat(5, 120px);
-		column-gap: 20px;
-	}
-}	
-
-.menu__link {
-	font-family: settings.$titlefont;
-	display: block;
-	text-decoration: none;
-	color: settings.$titlecolor;
-	font-family: settings.$titlefont;
-
-	&:hover {
-		font-weight: bold;
-	}
-}
-
-.menu__item--active .menu__link {
-	text-decoration-line: underline;
-		font-weight: bold;
-  }
-  */
 .hero {
   background-image: url(../images/uzdi.jpg);
   width: 100vw;
@@ -364,6 +332,11 @@ header {
   background-image: url(../images/nadmapou.JPG);
   margin-top: 20px;
 }
+@media screen and (min-width: 1150px) {
+  .hero2--alt5 {
+    background-position: 0 10%;
+  }
+}
 
 .hero2--alt6 {
   background-image: url(../images/babies.JPG);
@@ -383,7 +356,7 @@ header {
 }
 @media screen and (min-width: 700px) {
   .intro {
-    margin: 120px auto;
+    margin: 80px auto;
   }
 }
 .intro--alt {
@@ -452,7 +425,7 @@ footer {
     display: flex;
     align-items: center;
     text-align: right;
-    margin-top: 60px;
+    margin-top: 80px;
   }
 }
 @media screen and (min-width: 700px) {
@@ -505,6 +478,14 @@ footer {
   margin: 40px auto;
   padding: 0 20px;
   text-align: center;
+}
+@media screen and (min-width: 700px) {
+  .form-intro {
+    margin-top: 80px;
+  }
+}
+.form-intro--alt {
+  margin-top: 40px;
 }
 
 .form {
@@ -607,6 +588,11 @@ footer {
 .price {
   margin: 40px auto;
 }
+@media screen and (min-width: 700px) {
+  .price {
+    margin-top: 80px;
+  }
+}
 
 .price__headline,
 .price__text {
@@ -644,6 +630,11 @@ footer {
   text-align: center;
   margin: 40px;
 }
+@media screen and (min-width: 700px) {
+  .contact__headline {
+    margin-top: 80px;
+  }
+}
 
 .contact {
   margin: 0 auto;
@@ -679,7 +670,7 @@ footer {
 }
 
 .meeting-point {
-  margin: 80px auto;
+  margin: 40px auto;
   padding: 0 20px;
   text-align: center;
   max-width: 1000px;

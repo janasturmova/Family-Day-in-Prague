@@ -12,6 +12,14 @@
 	margin: settings.$spacer;
 	margin-bottom: settings.$spacer / 2;
 
+	@media screen and (min-width: settings.$breakpoint1) {
+		margin: settings.$spacer;
+	}
+
+	@media screen and (min-width: settings.$breakpoint2) {
+		margin-bottom: settings.$spacer * 2;
+	}
+
 	&::before,
 	&::after {
 		content:" ";

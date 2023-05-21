@@ -3,6 +3,10 @@
 .contact__headline {
     text-align: center;
     margin: settings.$spacer *2;
+
+    @media screen and (min-width: settings.$breakpoint1) {
+        margin-top: settings.$spacer *4;
+    }
 }
 
 .contact {
@@ -22,8 +26,6 @@
     @media  screen and (min-width: settings.$breakpoint1) {
         padding-left: settings.$spacer * 4;
     }
-
-
 }
 
 .meeting-point__image {
@@ -39,7 +41,7 @@
 }
 
 .meeting-point {
-    margin: settings.$spacer *4 auto;
+    margin: settings.$spacer *2 auto;
     padding: 0 settings.$spacer;
     text-align: center;
     max-width: settings.$maxwidth;

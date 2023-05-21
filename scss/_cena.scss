@@ -2,6 +2,10 @@
 
 .price {
     margin: settings.$spacer *2 auto;
+
+    @media screen and (min-width: settings.$breakpoint1) {
+        margin-top: settings.$spacer *4;
+    }
 }
 
 .price__headline,
