@@ -571,7 +571,7 @@ footer {
 }
 @media screen and (min-width: 1500px) {
   .answer__box {
-    margin: -100px auto;
+    margin: -500px auto;
   }
 }
 
